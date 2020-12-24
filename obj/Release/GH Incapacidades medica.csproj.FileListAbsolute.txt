@@ -1,0 +1,12 @@
+C:\Users\darthvirus\source\repos\GH Incapacidades medica\bin\Release\GH Incapacidades medica.exe.config
+C:\Users\darthvirus\source\repos\GH Incapacidades medica\bin\Release\GH Incapacidades medica.exe
+C:\Users\darthvirus\source\repos\GH Incapacidades medica\bin\Release\GH Incapacidades medica.pdb
+C:\Users\darthvirus\source\repos\GH Incapacidades medica\obj\Release\GH_Incapacidades_medica.Editar_personas.resources
+C:\Users\darthvirus\source\repos\GH Incapacidades medica\obj\Release\GH_Incapacidades_medica.Eps.resources
+C:\Users\darthvirus\source\repos\GH Incapacidades medica\obj\Release\GH_Incapacidades_medica.Main.resources
+C:\Users\darthvirus\source\repos\GH Incapacidades medica\obj\Release\GH_Incapacidades_medica.Notificacion_Radicado.resources
+C:\Users\darthvirus\source\repos\GH Incapacidades medica\obj\Release\GH_Incapacidades_medica.Properties.Resources.resources
+C:\Users\darthvirus\source\repos\GH Incapacidades medica\obj\Release\GH Incapacidades medica.csproj.GenerateResource.cache
+C:\Users\darthvirus\source\repos\GH Incapacidades medica\obj\Release\GH Incapacidades medica.csproj.CoreCompileInputs.cache
+C:\Users\darthvirus\source\repos\GH Incapacidades medica\obj\Release\GH Incapacidades medica.exe
+C:\Users\darthvirus\source\repos\GH Incapacidades medica\obj\Release\GH Incapacidades medica.pdb
