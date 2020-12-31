@@ -1,36 +1,43 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
 using System.Data.SqlClient;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace GH_Incapacidades_medica
 {
-    public partial class Editar_personas : Form
+    public partial class Editar_Radicado : Form
     {
-        public Editar_personas()
+        public Editar_Radicado()
         {
             InitializeComponent();
-            MaximizeBox = false;
-            MinimizeBox = false;
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
             TextBox textbo = (TextBox)sender;
-            string busca = textbo.Text;
+            int busca = Int32.Parse(textbo.Text);
 
             Consulta(busca);
         }
-        public void Consulta(string buscas)
+        public void Consulta(int busca)
         {
-            string nombre = null;
-            string cargo = null;
-            string area = null;
+
+            string Radicado = null;
+            string Fecha_Radicado = null;
+            string Fecha_Peticion = null;
+            string Fecha_Tutela = null;
             Conexion conexion = new Conexion();
             SqlConnection connecting = conexion.connecting();
             SqlDataReader reader = conexion.reader();
             try
             {
-                string consulta = "SELECT * FROM proyecto.GHIncapacidad.personas where Cedula=" + buscas + ""; //Consulta a MySQL (Muestra las bases de datos que tiene el servidor)
+                string consulta = "SELECT * FROM proyecto.dbo.peticion where RADICADO='" + busca + "' "; //Consulta a MySQL (Muestra las bases de datos que tiene el servidor)
                 SqlCommand comando = new SqlCommand(consulta)
                 {
                     Connection = connecting //Establece la MySqlConnection utilizada por esta instancia de MySqlCommand
@@ -41,15 +48,15 @@ namespace GH_Incapacidades_medica
                 while (reader.Read()) //Avanza MySqlDataReader al siguiente registro
                 {
 
-                    nombre = reader.GetString(1);
-                    cargo = reader.GetString(3);
-                    area = reader.GetString(2);
+                    Radicado = reader.GetString(0);
+                    Fecha_Radicado = reader.GetString(1);
+                    Fecha_Peticion = reader.GetString(2);
+                    Fecha_Tutela = reader.GetString(3);
 
-                    textBox3.Text = textBox1.Text;
-                    textBox2.Text = nombre;
-                    textBox4.Text = cargo;
-                    textBox5.Text = area;
-
+                    textBox2.Text = Radicado;
+                    dateTimePicker1.Text = Fecha_Radicado;
+                    dateTimePicker2.Text = Fecha_Peticion;
+                    dateTimePicker3.Text = Fecha_Tutela; 
 
                 }
 
@@ -83,16 +90,16 @@ namespace GH_Incapacidades_medica
         public void actualizar(string valor)
         {
 
-            string cedula = textBox3.Text;
-            string nombre = textBox2.Text;
-            string cargo = textBox4.Text;
-            string area = textBox5.Text;
+            string RADICADO = textBox2.Text;
+            string FECHA_RADICADO = dateTimePicker1.Text;
+            string FECHA_PETICION = dateTimePicker2.Text;
+            string FECHA_TUTELA = dateTimePicker3.Text;
 
             Conexion conexion = new Conexion();
             SqlConnection connecting = conexion.connecting();
             try
             {
-                string consulta = "UPDATE [proyecto].[dbo].[personas] SET Cedula='" + cedula + "',Nombre='" + nombre + "',Area='" + area + "',Carga='" + cargo + "' WHERE Cedula=" + cedula + " "; //Consulta a MySQL (Muestra las bases de datos que tiene el servidor)
+                string consulta = "UPDATE [proyecto].[dbo].[personas] SET RADICADO='" + RADICADO + "',FECHA_RADICADO='" + FECHA_RADICADO + "',FECHA_PETICION='" + FECHA_PETICION + "',FECHA_TUTELA='" + FECHA_TUTELA + "' WHERE RADICADO=" + RADICADO + " "; //Consulta a MySQL (Muestra las bases de datos que tiene el servidor)
                 SqlCommand comando = new SqlCommand(consulta)
                 {
                     Connection = connecting //Establece la MySqlConnection utilizada por esta instancia de MySqlCommand
@@ -115,16 +122,6 @@ namespace GH_Incapacidades_medica
                 //Cierra la conexión a MySQL
             }
 
-        }
-
-        private void textBox1_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            if (!(char.IsNumber(e.KeyChar)) && (e.KeyChar != (char)Keys.Back))
-            {
-                MessageBox.Show("Solo se permiten numeros", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-                e.Handled = true;
-                return;
-            }
         }
     }
 }

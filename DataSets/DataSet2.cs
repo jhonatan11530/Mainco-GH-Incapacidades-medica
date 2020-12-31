@@ -1,4 +1,4 @@
-﻿namespace GH_Incapacidades_medica
+﻿namespace GH_Incapacidades_medica.DataSets
 {
 
 

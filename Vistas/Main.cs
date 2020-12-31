@@ -118,15 +118,11 @@ namespace GH_Incapacidades_medica
 
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
-
-
             TextBox textbo = (TextBox)sender;
             string busca = textbo.Text;
-
             if (!string.IsNullOrEmpty(busca))
             {
                 Buscar(busca);
-                button1.Enabled = true;
             }
         }
         public void Buscar(string busca)
@@ -209,7 +205,6 @@ namespace GH_Incapacidades_medica
         }
         public void TipoIncapacidad(string code)
         {
-            string incapacidad = null;
 
             Conexion conexion = new Conexion();
             SqlConnection connecting = conexion.connecting();
@@ -226,7 +221,7 @@ namespace GH_Incapacidades_medica
 
                 while (reader.Read()) //Avanza MySqlDataReader al siguiente registro
                 {
-                    incapacidad = reader.GetString(0);//Almacena cada registro con un salto de linea
+                    string incapacidad = reader.GetString(0);//Almacena cada registro con un salto de linea
                     comboBox6.Items.Clear();
                     comboBox6.Items.Add(incapacidad);
 
@@ -272,14 +267,20 @@ namespace GH_Incapacidades_medica
         }
         private void button1_Click(object sender, EventArgs e)
         {
-            DialogResult btn = MessageBox.Show("LOS DATOS ESTAN CORRECTOS ?", "VERIFICACION", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
-            if (btn == DialogResult.Yes)
+            if (string.IsNullOrEmpty(textBox1.Text) || string.IsNullOrEmpty(textBox5.Text) || string.IsNullOrEmpty(textBox2.Text) || string.IsNullOrEmpty(DIAS_ASUMIDAS.Text) || string.IsNullOrEmpty(textBox3.Text) || string.IsNullOrEmpty(textBox4.Text))
             {
-                insertar();
+                MessageBox.Show("LOS CAMPOS ESTAN VACIOS");
             }
-            else
-            {
-                MessageBox.Show("VERIFIQUE LOS DATOS PRIMERO SI TODO ESTA CORRECTO !!", "VERIFIQUE", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            else { 
+                    DialogResult btn = MessageBox.Show("LOS DATOS ESTAN CORRECTOS ?", "VERIFICACION", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
+                if (btn == DialogResult.Yes)
+                {
+                    insertar();
+                }
+                else
+                {
+                    MessageBox.Show("VERIFIQUE LOS DATOS PRIMERO SI TODO ESTA CORRECTO !!", "VERIFIQUE", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                }
             }
         }
         public void insertar()
@@ -557,9 +558,25 @@ namespace GH_Incapacidades_medica
 
         private void button3_Click(object sender, EventArgs e)
         {
-            Editar_personas form4 = new Editar_personas();
+            Edicion form4 = new Edicion();
             form4.Show();
 
+        }
+
+        private void textBox5_TextChanged(object sender, EventArgs e)
+        {
+            
+            button1.Enabled = true;
+        }
+
+        private void dataGridView2_SelectionChanged(object sender, EventArgs e)
+        {
+            foreach (DataGridViewRow row in dataGridView2.SelectedRows)
+            {
+                string Radicado = row.Cells[0].Value.ToString();
+                InforRadicado inforRadicado = new InforRadicado(Radicado);
+                inforRadicado.Show();
+            }
         }
     }
 

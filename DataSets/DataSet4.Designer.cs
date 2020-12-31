@@ -10,7 +10,7 @@
 
 #pragma warning disable 1591
 
-namespace GH_Incapacidades_medica {
+namespace GH_Incapacidades_medica.DataSets {
     
     
     /// <summary>
@@ -20,9 +20,9 @@ namespace GH_Incapacidades_medica {
     [global::System.ComponentModel.DesignerCategoryAttribute("code")]
     [global::System.ComponentModel.ToolboxItem(true)]
     [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedDataSetSchema")]
-    [global::System.Xml.Serialization.XmlRootAttribute("DataSet2")]
+    [global::System.Xml.Serialization.XmlRootAttribute("DataSet4")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.DataSet")]
-    public partial class DataSet2 : global::System.Data.DataSet {
+    public partial class DataSet4 : global::System.Data.DataSet {
         
         private peticionDataTable tablepeticion;
         
@@ -30,7 +30,7 @@ namespace GH_Incapacidades_medica {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        public DataSet2() {
+        public DataSet4() {
             this.BeginInit();
             this.InitClass();
             global::System.ComponentModel.CollectionChangeEventHandler schemaChangedHandler = new global::System.ComponentModel.CollectionChangeEventHandler(this.SchemaChanged);
@@ -41,7 +41,7 @@ namespace GH_Incapacidades_medica {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        protected DataSet2(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+        protected DataSet4(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                 base(info, context, false) {
             if ((this.IsBinarySerialized(info, context) == true)) {
                 this.InitVars(false);
@@ -127,7 +127,7 @@ namespace GH_Incapacidades_medica {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         public override global::System.Data.DataSet Clone() {
-            DataSet2 cln = ((DataSet2)(base.Clone()));
+            DataSet4 cln = ((DataSet4)(base.Clone()));
             cln.InitVars();
             cln.SchemaSerializationMode = this.SchemaSerializationMode;
             return cln;
@@ -199,9 +199,9 @@ namespace GH_Incapacidades_medica {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private void InitClass() {
-            this.DataSetName = "DataSet2";
+            this.DataSetName = "DataSet4";
             this.Prefix = "";
-            this.Namespace = "http://tempuri.org/DataSet2.xsd";
+            this.Namespace = "http://tempuri.org/DataSet4.xsd";
             this.EnforceConstraints = true;
             this.SchemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
             this.tablepeticion = new peticionDataTable();
@@ -225,7 +225,7 @@ namespace GH_Incapacidades_medica {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedDataSetSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
-            DataSet2 ds = new DataSet2();
+            DataSet4 ds = new DataSet4();
             global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
             global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
             global::System.Xml.Schema.XmlSchemaAny any = new global::System.Xml.Schema.XmlSchemaAny();
@@ -435,7 +435,7 @@ namespace GH_Incapacidades_medica {
                 base.Columns.Add(this.columnFECHA_PETICION);
                 this.columnFECHA_TUTELA = new global::System.Data.DataColumn("FECHA_TUTELA", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnFECHA_TUTELA);
-                this.columnRADICADO.MaxLength = 25;
+                this.columnRADICADO.MaxLength = 35;
                 this.columnFECHA_RADICADO.MaxLength = 12;
                 this.columnFECHA_PETICION.MaxLength = 12;
                 this.columnFECHA_TUTELA.MaxLength = 12;
@@ -506,7 +506,7 @@ namespace GH_Incapacidades_medica {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                DataSet2 ds = new DataSet2();
+                DataSet4 ds = new DataSet4();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -727,7 +727,7 @@ namespace GH_Incapacidades_medica {
         }
     }
 }
-namespace GH_Incapacidades_medica.DataSet2TableAdapters {
+namespace GH_Incapacidades_medica.DataSets.DataSet4TableAdapters {
     
     
     /// <summary>
@@ -858,8 +858,8 @@ namespace GH_Incapacidades_medica.DataSet2TableAdapters {
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.InsertCommand = new global::System.Data.OleDb.OleDbCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = "INSERT INTO [GestionHumanaIncapacidad].[dbo].[peticion] ([RADICADO], [FECHA_RADIC" +
-                "ADO], [FECHA_PETICION], [FECHA_TUTELA]) VALUES (?, ?, ?, ?)";
+            this._adapter.InsertCommand.CommandText = "INSERT INTO [proyecto].[dbo].[peticion] ([RADICADO], [FECHA_RADICADO], [FECHA_PET" +
+                "ICION], [FECHA_TUTELA]) VALUES (?, ?, ?, ?)";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("RADICADO", global::System.Data.OleDb.OleDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "RADICADO", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("FECHA_RADICADO", global::System.Data.OleDb.OleDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "FECHA_RADICADO", global::System.Data.DataRowVersion.Current, false, null));
@@ -871,7 +871,8 @@ namespace GH_Incapacidades_medica.DataSet2TableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.OleDb.OleDbConnection();
-            this._connection.ConnectionString = global::GH_Incapacidades_medica.Properties.Settings.Default.Incapacidad;
+            this._connection.ConnectionString = "Provider=SQLNCLI11;Data Source=192.168.20.9;Persist Security Info=True;Password=1" +
+                "2345;User ID=proyecto";
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -880,7 +881,8 @@ namespace GH_Incapacidades_medica.DataSet2TableAdapters {
             this._commandCollection = new global::System.Data.OleDb.OleDbCommand[1];
             this._commandCollection[0] = new global::System.Data.OleDb.OleDbCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT RADICADO, FECHA_RADICADO, FECHA_PETICION, FECHA_TUTELA FROM peticion";
+            this._commandCollection[0].CommandText = "SELECT \"RADICADO\", \"FECHA_RADICADO\", \"FECHA_PETICION\", \"FECHA_TUTELA\" FROM \"dbo\"." +
+                "\"peticion\"";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
@@ -888,7 +890,7 @@ namespace GH_Incapacidades_medica.DataSet2TableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(DataSet2.peticionDataTable dataTable) {
+        public virtual int Fill(DataSet4.peticionDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -901,9 +903,9 @@ namespace GH_Incapacidades_medica.DataSet2TableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual DataSet2.peticionDataTable GetData() {
+        public virtual DataSet4.peticionDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            DataSet2.peticionDataTable dataTable = new DataSet2.peticionDataTable();
+            DataSet4.peticionDataTable dataTable = new DataSet4.peticionDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -911,14 +913,14 @@ namespace GH_Incapacidades_medica.DataSet2TableAdapters {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(DataSet2.peticionDataTable dataTable) {
+        public virtual int Update(DataSet4.peticionDataTable dataTable) {
             return this.Adapter.Update(dataTable);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(DataSet2 dataSet) {
+        public virtual int Update(DataSet4 dataSet) {
             return this.Adapter.Update(dataSet, "peticion");
         }
         
@@ -1074,7 +1076,7 @@ namespace GH_Incapacidades_medica.DataSet2TableAdapters {
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        private int UpdateUpdatedRows(DataSet2 dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
+        private int UpdateUpdatedRows(DataSet4 dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
             if ((this._peticionTableAdapter != null)) {
                 global::System.Data.DataRow[] updatedRows = dataSet.peticion.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
@@ -1093,7 +1095,7 @@ namespace GH_Incapacidades_medica.DataSet2TableAdapters {
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        private int UpdateInsertedRows(DataSet2 dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
+        private int UpdateInsertedRows(DataSet4 dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
             if ((this._peticionTableAdapter != null)) {
                 global::System.Data.DataRow[] addedRows = dataSet.peticion.Select(null, null, global::System.Data.DataViewRowState.Added);
@@ -1111,7 +1113,7 @@ namespace GH_Incapacidades_medica.DataSet2TableAdapters {
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        private int UpdateDeletedRows(DataSet2 dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
+        private int UpdateDeletedRows(DataSet4 dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
             int result = 0;
             if ((this._peticionTableAdapter != null)) {
                 global::System.Data.DataRow[] deletedRows = dataSet.peticion.Select(null, null, global::System.Data.DataViewRowState.Deleted);
@@ -1153,7 +1155,7 @@ namespace GH_Incapacidades_medica.DataSet2TableAdapters {
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        public virtual int UpdateAll(DataSet2 dataSet) {
+        public virtual int UpdateAll(DataSet4 dataSet) {
             if ((dataSet == null)) {
                 throw new global::System.ArgumentNullException("dataSet");
             }

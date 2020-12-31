@@ -80,7 +80,7 @@
             this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.peticionBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.dataSet2 = new GH_Incapacidades_medica.DataSet2();
+            this.dataSet2 = new GH_Incapacidades_medica.DataSets.DataSet2();
             this.label24 = new System.Windows.Forms.Label();
             this.label25 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
@@ -90,7 +90,7 @@
             this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.incapacidad = new System.Windows.Forms.BindingSource(this.components);
-            this.dataSet1 = new GH_Incapacidades_medica.DataSet1();
+            this.dataSet1 = new GH_Incapacidades_medica.DataSets.DataSet1();
             this.textBox5 = new System.Windows.Forms.TextBox();
             this.label26 = new System.Windows.Forms.Label();
             this.hora = new System.Windows.Forms.Label();
@@ -101,8 +101,8 @@
             this.button3 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
-            this.peticionTableAdapter = new GH_Incapacidades_medica.DataSet2TableAdapters.peticionTableAdapter();
-            this.incapacidadTableAdapter = new GH_Incapacidades_medica.DataSet1TableAdapters.incapacidadTableAdapter();
+            this.peticionTableAdapter = new GH_Incapacidades_medica.DataSets.DataSet2TableAdapters.peticionTableAdapter();
+            this.incapacidadTableAdapter = new GH_Incapacidades_medica.DataSets.DataSet1TableAdapters.incapacidadTableAdapter();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.peticionBindingSource)).BeginInit();
@@ -583,8 +583,9 @@
             this.dataGridView2.Location = new System.Drawing.Point(698, 376);
             this.dataGridView2.Name = "dataGridView2";
             this.dataGridView2.ReadOnly = true;
-            this.dataGridView2.Size = new System.Drawing.Size(444, 150);
+            this.dataGridView2.Size = new System.Drawing.Size(460, 150);
             this.dataGridView2.TabIndex = 6;
+            this.dataGridView2.SelectionChanged += new System.EventHandler(this.dataGridView2_SelectionChanged);
             // 
             // dataGridViewTextBoxColumn6
             // 
@@ -628,7 +629,7 @@
             // 
             this.label24.AutoSize = true;
             this.label24.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label24.Location = new System.Drawing.Point(788, 139);
+            this.label24.Location = new System.Drawing.Point(784, 119);
             this.label24.Name = "label24";
             this.label24.Size = new System.Drawing.Size(354, 20);
             this.label24.TabIndex = 7;
@@ -673,10 +674,10 @@
             dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle4;
-            this.dataGridView1.Location = new System.Drawing.Point(698, 162);
+            this.dataGridView1.Location = new System.Drawing.Point(698, 145);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.Size = new System.Drawing.Size(545, 149);
+            this.dataGridView1.Size = new System.Drawing.Size(560, 176);
             this.dataGridView1.TabIndex = 10;
             // 
             // Column1
@@ -731,6 +732,7 @@
             this.textBox5.Name = "textBox5";
             this.textBox5.Size = new System.Drawing.Size(218, 29);
             this.textBox5.TabIndex = 11;
+            this.textBox5.TextChanged += new System.EventHandler(this.textBox5_TextChanged);
             this.textBox5.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox5_KeyPress);
             // 
             // label26
@@ -784,7 +786,7 @@
             // button3
             // 
             this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold);
-            this.button3.Location = new System.Drawing.Point(951, 600);
+            this.button3.Location = new System.Drawing.Point(824, 580);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(120, 53);
             this.button3.TabIndex = 20;
@@ -795,7 +797,7 @@
             // button1
             // 
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold);
-            this.button1.Location = new System.Drawing.Point(810, 599);
+            this.button1.Location = new System.Drawing.Point(698, 580);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(120, 53);
             this.button1.TabIndex = 21;
@@ -806,7 +808,7 @@
             // button4
             // 
             this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold);
-            this.button4.Location = new System.Drawing.Point(1086, 599);
+            this.button4.Location = new System.Drawing.Point(950, 580);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(120, 53);
             this.button4.TabIndex = 23;
@@ -925,12 +927,12 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn fECHARADICADODataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn fECHAPETICIONDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn fECHATUTELADataGridViewTextBoxColumn;
-        private DataSet1 dataSet1;
+        private DataSets.DataSet1 dataSet1;
         private System.Windows.Forms.BindingSource incapacidad;
-        private DataSet1TableAdapters.incapacidadTableAdapter incapacidadTableAdapter;
-        private DataSet2 dataSet2;
+        private DataSets.DataSet1TableAdapters.incapacidadTableAdapter incapacidadTableAdapter;
+        private DataSets.DataSet2 dataSet2;
         private System.Windows.Forms.BindingSource peticionBindingSource;
-        private DataSet2TableAdapters.peticionTableAdapter peticionTableAdapter;
+        private DataSets.DataSet2TableAdapters.peticionTableAdapter peticionTableAdapter;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn7;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn8;

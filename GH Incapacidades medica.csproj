@@ -51,7 +51,8 @@
   </PropertyGroup>
   <PropertyGroup />
   <PropertyGroup>
-    <ApplicationIcon>mainco.ico</ApplicationIcon>
+    <ApplicationIcon>
+    </ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -67,56 +68,93 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Conexion.cs" />
-    <Compile Include="DataSet1.Designer.cs">
+    <Compile Include="Conexion\Conexion.cs" />
+    <Compile Include="DataSets\DataSet1.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>DataSet1.xsd</DependentUpon>
     </Compile>
-    <Compile Include="DataSet2.cs">
+    <Compile Include="DataSets\DataSet2.cs">
       <DependentUpon>DataSet2.xsd</DependentUpon>
     </Compile>
-    <Compile Include="DataSet2.Designer.cs">
+    <Compile Include="DataSets\DataSet2.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>DataSet2.xsd</DependentUpon>
     </Compile>
-    <Compile Include="Editar_personas.cs">
+    <Compile Include="DataSets\DataSet3.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSet3.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSets\DataSet4.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSet4.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\Edicion.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Editar_personas.Designer.cs">
+    <Compile Include="Vistas\Edicion.Designer.cs">
+      <DependentUpon>Edicion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\Editar_personas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vistas\Editar_personas.Designer.cs">
       <DependentUpon>Editar_personas.cs</DependentUpon>
     </Compile>
-    <Compile Include="Eps.cs">
+    <Compile Include="Vistas\Editar_Radicado.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Eps.Designer.cs">
+    <Compile Include="Vistas\Editar_Radicado.Designer.cs">
+      <DependentUpon>Editar_Radicado.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\Eps.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vistas\Eps.Designer.cs">
       <DependentUpon>Eps.cs</DependentUpon>
     </Compile>
-    <Compile Include="Main.cs">
+    <Compile Include="Vistas\InforRadicado.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Main.Designer.cs">
+    <Compile Include="Vistas\InforRadicado.Designer.cs">
+      <DependentUpon>InforRadicado.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\Main.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vistas\Main.Designer.cs">
       <DependentUpon>Main.cs</DependentUpon>
     </Compile>
-    <Compile Include="Notificacion_Radicado.cs">
+    <Compile Include="Vistas\Notificacion_Radicado.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Notificacion_Radicado.Designer.cs">
+    <Compile Include="Vistas\Notificacion_Radicado.Designer.cs">
       <DependentUpon>Notificacion_Radicado.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Editar_personas.resx">
+    <EmbeddedResource Include="Vistas\Edicion.resx">
+      <DependentUpon>Edicion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vistas\Editar_personas.resx">
       <DependentUpon>Editar_personas.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Eps.resx">
+    <EmbeddedResource Include="Vistas\Editar_Radicado.resx">
+      <DependentUpon>Editar_Radicado.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vistas\Eps.resx">
       <DependentUpon>Eps.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Main.resx">
+    <EmbeddedResource Include="Vistas\InforRadicado.resx">
+      <DependentUpon>InforRadicado.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vistas\Main.resx">
       <DependentUpon>Main.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Notificacion_Radicado.resx">
+    <EmbeddedResource Include="Vistas\Notificacion_Radicado.resx">
       <DependentUpon>Notificacion_Radicado.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -129,27 +167,49 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <None Include="DataSet1.xsc">
+    <None Include="DataSets\DataSet1.xsc">
       <DependentUpon>DataSet1.xsd</DependentUpon>
     </None>
-    <None Include="DataSet1.xsd">
+    <None Include="DataSets\DataSet1.xsd">
       <Generator>MSDataSetGenerator</Generator>
       <LastGenOutput>DataSet1.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </None>
-    <None Include="DataSet1.xss">
+    <None Include="DataSets\DataSet1.xss">
       <DependentUpon>DataSet1.xsd</DependentUpon>
     </None>
-    <None Include="DataSet2.xsc">
+    <None Include="DataSets\DataSet2.xsc">
       <DependentUpon>DataSet2.xsd</DependentUpon>
     </None>
-    <None Include="DataSet2.xsd">
+    <None Include="DataSets\DataSet2.xsd">
       <Generator>MSDataSetGenerator</Generator>
       <LastGenOutput>DataSet2.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </None>
-    <None Include="DataSet2.xss">
+    <None Include="DataSets\DataSet2.xss">
       <DependentUpon>DataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="DataSets\DataSet3.xsc">
+      <DependentUpon>DataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="DataSets\DataSet3.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSet3.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DataSets\DataSet3.xss">
+      <DependentUpon>DataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="DataSets\DataSet4.xsc">
+      <DependentUpon>DataSet4.xsd</DependentUpon>
+    </None>
+    <None Include="DataSets\DataSet4.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSet4.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DataSets\DataSet4.xss">
+      <DependentUpon>DataSet4.xsd</DependentUpon>
     </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -166,9 +226,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\mainco.ico" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="mainco.ico" />
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">
