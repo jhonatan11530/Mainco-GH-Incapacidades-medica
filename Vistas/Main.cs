@@ -1,9 +1,11 @@
-﻿using Microsoft.Win32;
+﻿using GH_Incapacidades_medica.Properties;
+using Microsoft.Win32;
 using System;
 using System.Data;
 using System.Data.SqlClient;
 using System.Diagnostics;
 using System.Drawing;
+using System.Resources;
 using System.Threading;
 using System.Windows.Forms;
 namespace GH_Incapacidades_medica
@@ -17,10 +19,13 @@ namespace GH_Incapacidades_medica
             ejecutar();
             SetStartup();
 
+            textBox5.Enabled = false;
 
             DateTime fechaActual = DateTime.Today;
             hora.Text = "FECHA : " + fechaActual.ToString("dd MMMM, yyyy ").ToUpper();
-
+            
+            dateTimePicker1.Value = fechaActual;
+            dateTimePicker2.Value = fechaActual;
 
             //Creamos el delegado SEMANA
             ThreadStart delegado = new ThreadStart(SEMANA);
@@ -127,9 +132,7 @@ namespace GH_Incapacidades_medica
         }
         public void Buscar(string busca)
         {
-            string nombre = null;
-            string cargo = null;
-            string area = null;
+
             string[] empresa = { "Mainco", "Ocupar", "Biosecurity", "Foi asociados" };
             string[] eventro = { "Enfermedad general", "Accidente Transito", "Accidente Laboral", "Licencia Maternidad", "Licencia Paternidad", "Pre-Licencia", "Enfermedad Laboral" };
             Conexion conexion = new Conexion();
@@ -147,18 +150,20 @@ namespace GH_Incapacidades_medica
 
                 while (reader.Read()) //Avanza MySqlDataReader al siguiente registro
                 {
-                    nombre = reader.GetString(1);
-                    area = reader.GetString(3);
-                    cargo = reader.GetString(2);//Almacena cada registro con un salto de linea
+                    string nombre =  reader.GetString(2) ;
+                    string area =  reader.GetString(4) ;
+                    string cargo =  reader.GetString(3) ;//Almacena cada registro con un salto de linea
 
 
                     comboBox1.Items.Clear();
                     comboBox2.Items.Clear();
                     comboBox3.Items.Clear();
 
-                    comboBox1.Items.Add(nombre);
-                    comboBox2.Items.Add(area);
-                    comboBox3.Items.Add(cargo);
+                        comboBox1.Items.Add(nombre);
+                        comboBox2.Items.Add(area);
+                        comboBox3.Items.Add(cargo);
+                    
+
 
                     comboBox1.SelectedIndex = +0;
                     comboBox2.SelectedIndex = +0;
@@ -269,7 +274,7 @@ namespace GH_Incapacidades_medica
         {
             if (string.IsNullOrEmpty(textBox1.Text) || string.IsNullOrEmpty(textBox5.Text) || string.IsNullOrEmpty(textBox2.Text) || string.IsNullOrEmpty(DIAS_ASUMIDAS.Text) || string.IsNullOrEmpty(textBox3.Text) || string.IsNullOrEmpty(textBox4.Text))
             {
-                MessageBox.Show("LOS CAMPOS ESTAN VACIOS");
+                MessageBox.Show("LOS CAMPOS ESTAN VACIOS","VACIO !!",MessageBoxButtons.OK,MessageBoxIcon.Warning);
             }
             else { 
                     DialogResult btn = MessageBox.Show("LOS DATOS ESTAN CORRECTOS ?", "VERIFICACION", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
@@ -413,10 +418,10 @@ namespace GH_Incapacidades_medica
 
                 while (reader.Read()) //Avanza MySqlDataReader al siguiente registro
                 {
-                    Nradicado = reader.GetString(0);
-                    radicado = reader.GetString(1); //Almacena cada registro con un salto de linea
-                    peticion = reader.GetString(2);
-                    tutela = reader.GetString(3);
+                    Nradicado = reader.GetString(1);
+                    radicado = reader.GetString(2); //Almacena cada registro con un salto de linea
+                    peticion = reader.GetString(3);
+                    tutela = reader.GetString(4);
 
                 }
                 if (hoy == radicado)
@@ -499,8 +504,7 @@ namespace GH_Incapacidades_medica
             {
                 Hide();
                 notifyIcon1.Visible = true;
-
-                notifyIcon1.Icon = new Icon(@"Y:\AREA GESTION HUMANA\SOFTWARE AYUDANTE DE INCAPACIDADES\mainco.ico");
+                notifyIcon1.Icon = Properties.Resources.mainco;
                 notifyIcon1.Text = "Notificacion";
                 notifyIcon1.Visible = true;
                 notifyIcon1.ShowBalloonTip(2000, "Informacion", "la aplicacion esta minimizada!", ToolTipIcon.Info);
@@ -573,10 +577,30 @@ namespace GH_Incapacidades_medica
         {
             foreach (DataGridViewRow row in dataGridView2.SelectedRows)
             {
+               
                 string Radicado = row.Cells[0].Value.ToString();
                 InforRadicado inforRadicado = new InforRadicado(Radicado);
                 inforRadicado.Show();
+                
             }
+        }
+
+        private void checkBox2_Click(object sender, EventArgs e)
+        {
+            checkBox1.Checked = false;
+            checkBox2.Checked = true;
+
+            textBox5.Text = "SIN RADICADO";
+            textBox5.Enabled = false;
+        }
+
+        private void checkBox1_Click(object sender, EventArgs e)
+        {
+            checkBox2.Checked = false;
+            checkBox1.Checked = true;
+
+            textBox5.Text = "";
+            textBox5.Enabled = true;
         }
     }
 

@@ -53,9 +53,9 @@
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(73, 9);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(272, 20);
+            this.label1.Size = new System.Drawing.Size(269, 20);
             this.label1.TabIndex = 1;
-            this.label1.Text = "EDITAR DATOS DE PERSONAS";
+            this.label1.Text = "EDITAR DATOS DE RADICADO";
             // 
             // label3
             // 
@@ -92,15 +92,15 @@
             this.panel1.Controls.Add(this.label8);
             this.panel1.Location = new System.Drawing.Point(3, 109);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(454, 426);
+            this.panel1.Size = new System.Drawing.Size(454, 445);
             this.panel1.TabIndex = 5;
             // 
             // button1
             // 
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
-            this.button1.Location = new System.Drawing.Point(146, 371);
+            this.button1.Location = new System.Drawing.Point(148, 389);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(116, 37);
+            this.button1.Size = new System.Drawing.Size(116, 45);
             this.button1.TabIndex = 21;
             this.button1.Text = "GUARDAR";
             this.button1.UseVisualStyleBackColor = true;
@@ -110,7 +110,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold);
-            this.label6.Location = new System.Drawing.Point(143, 305);
+            this.label6.Location = new System.Drawing.Point(134, 305);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(130, 18);
             this.label6.TabIndex = 20;
@@ -120,16 +120,16 @@
             // 
             this.dateTimePicker3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dateTimePicker3.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker3.Location = new System.Drawing.Point(146, 326);
+            this.dateTimePicker3.Location = new System.Drawing.Point(137, 326);
             this.dateTimePicker3.Name = "dateTimePicker3";
-            this.dateTimePicker3.Size = new System.Drawing.Size(134, 26);
+            this.dateTimePicker3.Size = new System.Drawing.Size(150, 26);
             this.dateTimePicker3.TabIndex = 19;
             // 
             // label5
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold);
-            this.label5.Location = new System.Drawing.Point(143, 229);
+            this.label5.Location = new System.Drawing.Point(134, 229);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(145, 18);
             this.label5.TabIndex = 18;
@@ -139,16 +139,16 @@
             // 
             this.dateTimePicker2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dateTimePicker2.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker2.Location = new System.Drawing.Point(146, 250);
+            this.dateTimePicker2.Location = new System.Drawing.Point(137, 250);
             this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.Size = new System.Drawing.Size(134, 26);
+            this.dateTimePicker2.Size = new System.Drawing.Size(150, 26);
             this.dateTimePicker2.TabIndex = 17;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold);
-            this.label2.Location = new System.Drawing.Point(143, 146);
+            this.label2.Location = new System.Drawing.Point(134, 146);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(153, 18);
             this.label2.TabIndex = 16;
@@ -156,18 +156,19 @@
             // 
             // dateTimePicker1
             // 
+            this.dateTimePicker1.DropDownAlign = System.Windows.Forms.LeftRightAlignment.Right;
             this.dateTimePicker1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker1.Location = new System.Drawing.Point(146, 167);
+            this.dateTimePicker1.Location = new System.Drawing.Point(137, 167);
             this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(134, 26);
+            this.dateTimePicker1.Size = new System.Drawing.Size(150, 26);
             this.dateTimePicker1.TabIndex = 15;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold);
-            this.label4.Location = new System.Drawing.Point(167, 73);
+            this.label4.Location = new System.Drawing.Point(147, 73);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(117, 18);
             this.label4.TabIndex = 14;
@@ -175,10 +176,10 @@
             // 
             // textBox2
             // 
-            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
-            this.textBox2.Location = new System.Drawing.Point(79, 94);
+            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox2.Location = new System.Drawing.Point(112, 94);
             this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(268, 24);
+            this.textBox2.Size = new System.Drawing.Size(202, 26);
             this.textBox2.TabIndex = 13;
             this.textBox2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -206,15 +207,17 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(460, 536);
+            this.ClientSize = new System.Drawing.Size(461, 557);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "Editar_Radicado";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Editar_Radicado";
+            this.Text = "Editar Radicado";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.ResumeLayout(false);

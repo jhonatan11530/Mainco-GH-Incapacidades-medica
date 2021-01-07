@@ -48,10 +48,10 @@ namespace GH_Incapacidades_medica
                 while (reader.Read()) //Avanza MySqlDataReader al siguiente registro
                 {
 
-                    Radicado = reader.GetString(0);
-                    Fecha_Radicado = reader.GetString(1);
-                    Fecha_Peticion = reader.GetString(2);
-                    Fecha_Tutela = reader.GetString(3);
+                    Radicado = reader.GetString(1);
+                    Fecha_Radicado = reader.GetString(2);
+                    Fecha_Peticion = reader.GetString(3);
+                    Fecha_Tutela = reader.GetString(4);
 
                     textBox2.Text = Radicado;
                     dateTimePicker1.Text = Fecha_Radicado;
@@ -123,5 +123,6 @@ namespace GH_Incapacidades_medica
             }
 
         }
+
     }
 }

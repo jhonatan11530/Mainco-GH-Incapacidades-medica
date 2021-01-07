@@ -25,7 +25,7 @@ namespace GH_Incapacidades_medica
                  DataTable dt;
                  try
                  {
-                     da = new SqlDataAdapter("SELECT * FROM [proyecto].[dbo].[peticion] WHERE FECHA_RADICADO='" + valor + "'", connecting);
+                     da = new SqlDataAdapter("SELECT RADICADO,FECHA_RADICADO,FECHA_PETICION,FECHA_TUTELA FROM [proyecto].[dbo].[peticion] WHERE FECHA_RADICADO='" + valor + "'", connecting);
                      dt = new DataTable();
                      da.Fill(dt);
                      dataGridView1.DataSource = dt;
@@ -97,6 +97,13 @@ namespace GH_Incapacidades_medica
         private void button1_Click(object sender, EventArgs e)
         {
             Close();
+
+        }
+
+        private void Notificacion_Radicado_Load(object sender, EventArgs e)
+        {
+            // TODO: esta línea de código carga datos en la tabla 'dataSet5.peticion' Puede moverla o quitarla según sea necesario.
+            this.peticionTableAdapter.Fill(this.dataSet5.peticion);
 
         }
     }

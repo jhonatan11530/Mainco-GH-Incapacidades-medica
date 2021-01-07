@@ -20,7 +20,7 @@ namespace GH_Incapacidades_medica
         }
         public void Filtrar(string Radicado)
         {
-
+            textBox1.Text = Radicado;
             Conexion conexion = new Conexion();
             SqlConnection connecting = conexion.connecting();
             SqlDataAdapter da;
@@ -48,14 +48,6 @@ namespace GH_Incapacidades_medica
             }
 
         }
-
-        private void InforRadicado_Load(object sender, EventArgs e)
-        {
-            // TODO: esta línea de código carga datos en la tabla 'dataSet4.peticion' Puede moverla o quitarla según sea necesario.
-            this.peticionTableAdapter.Fill(this.dataSet4.peticion);
-            // TODO: esta línea de código carga datos en la tabla 'dataSet3.incapacidad' Puede moverla o quitarla según sea necesario.
-            this.incapacidadTableAdapter.Fill(this.dataSet3.incapacidad);
-
-        }
+ 
     }
 }

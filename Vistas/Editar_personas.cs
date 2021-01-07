@@ -41,9 +41,9 @@ namespace GH_Incapacidades_medica
                 while (reader.Read()) //Avanza MySqlDataReader al siguiente registro
                 {
 
-                    nombre = reader.GetString(1);
-                    cargo = reader.GetString(3);
-                    area = reader.GetString(2);
+                    nombre = reader.GetString(2);
+                    cargo = reader.GetString(4);
+                    area = reader.GetString(3);
 
                     textBox3.Text = textBox1.Text;
                     textBox2.Text = nombre;
