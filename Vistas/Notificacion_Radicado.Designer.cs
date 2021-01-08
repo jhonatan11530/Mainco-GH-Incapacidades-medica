@@ -33,19 +33,19 @@
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.label3 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.dataSet5 = new GH_Incapacidades_medica.DataSets.DataSet5();
-            this.peticionBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.peticionTableAdapter = new GH_Incapacidades_medica.DataSets.DataSet5TableAdapters.peticionTableAdapter();
             this.rADICADODataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.fECHARADICADODataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.fECHAPETICIONDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.fECHATUTELADataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.peticionBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.dataSet5 = new GH_Incapacidades_medica.DataSets.DataSet5();
+            this.label3 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
+            this.peticionTableAdapter = new GH_Incapacidades_medica.DataSets.DataSet5TableAdapters.peticionTableAdapter();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataSet5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.peticionBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataSet5)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -87,41 +87,6 @@
             this.dataGridView1.Size = new System.Drawing.Size(768, 279);
             this.dataGridView1.TabIndex = 0;
             // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(255, 49);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(309, 24);
-            this.label3.TabIndex = 2;
-            this.label3.Text = "FECHA LIMITE DE RADICADOS";
-            // 
-            // button1
-            // 
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(345, 394);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(136, 44);
-            this.button1.TabIndex = 3;
-            this.button1.Text = "CONTINUAR";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // dataSet5
-            // 
-            this.dataSet5.DataSetName = "DataSet5";
-            this.dataSet5.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // peticionBindingSource
-            // 
-            this.peticionBindingSource.DataMember = "peticion";
-            this.peticionBindingSource.DataSource = this.dataSet5;
-            // 
-            // peticionTableAdapter
-            // 
-            this.peticionTableAdapter.ClearBeforeFill = true;
-            // 
             // rADICADODataGridViewTextBoxColumn
             // 
             this.rADICADODataGridViewTextBoxColumn.DataPropertyName = "RADICADO";
@@ -150,6 +115,41 @@
             this.fECHATUTELADataGridViewTextBoxColumn.Name = "fECHATUTELADataGridViewTextBoxColumn";
             this.fECHATUTELADataGridViewTextBoxColumn.ReadOnly = true;
             // 
+            // peticionBindingSource
+            // 
+            this.peticionBindingSource.DataMember = "peticion";
+            this.peticionBindingSource.DataSource = this.dataSet5;
+            // 
+            // dataSet5
+            // 
+            this.dataSet5.DataSetName = "DataSet5";
+            this.dataSet5.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(255, 49);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(309, 24);
+            this.label3.TabIndex = 2;
+            this.label3.Text = "FECHA LIMITE DE RADICADOS";
+            // 
+            // button1
+            // 
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Location = new System.Drawing.Point(345, 394);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(136, 44);
+            this.button1.TabIndex = 3;
+            this.button1.Text = "CONTINUAR";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // peticionTableAdapter
+            // 
+            this.peticionTableAdapter.ClearBeforeFill = true;
+            // 
             // Notificacion_Radicado
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -166,8 +166,8 @@
             this.Load += new System.EventHandler(this.Notificacion_Radicado_Load);
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataSet5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.peticionBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataSet5)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

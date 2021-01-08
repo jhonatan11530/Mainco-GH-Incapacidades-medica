@@ -562,6 +562,7 @@ namespace GH_Incapacidades_medica
 
         private void button3_Click(object sender, EventArgs e)
         {
+            button3.Enabled = false;
             Edicion form4 = new Edicion();
             form4.Show();
 
@@ -569,7 +570,7 @@ namespace GH_Incapacidades_medica
 
         private void textBox5_TextChanged(object sender, EventArgs e)
         {
-            
+            button3.Enabled = true;
             button1.Enabled = true;
         }
 

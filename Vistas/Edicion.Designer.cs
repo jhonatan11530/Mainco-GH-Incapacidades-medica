@@ -70,7 +70,6 @@
             // 
             // button3
             // 
-            this.button3.Enabled = false;
             this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold);
             this.button3.Location = new System.Drawing.Point(152, 183);
             this.button3.Name = "button3";
@@ -78,6 +77,7 @@
             this.button3.TabIndex = 5;
             this.button3.Text = "ELIMINAR DATOS";
             this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // Edicion
             // 

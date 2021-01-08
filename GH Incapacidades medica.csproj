@@ -69,6 +69,21 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Conexion\Conexion.cs" />
+    <Compile Include="DataSets\DataSet6.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSet6.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSets\DataSet7.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSet7.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSets\DataSet8.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSet8.xsd</DependentUpon>
+    </Compile>
     <Compile Include="DataSets\DataSet5.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -96,6 +111,12 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>DataSet4.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\Borrar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vistas\Borrar.Designer.cs">
+      <DependentUpon>Borrar.cs</DependentUpon>
     </Compile>
     <Compile Include="Vistas\Edicion.cs">
       <SubType>Form</SubType>
@@ -141,6 +162,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Vistas\Borrar.resx">
+      <DependentUpon>Borrar.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Vistas\Edicion.resx">
       <DependentUpon>Edicion.cs</DependentUpon>
     </EmbeddedResource>
@@ -172,6 +196,39 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <None Include="DataSets\DataSet6.xsc">
+      <DependentUpon>DataSet6.xsd</DependentUpon>
+    </None>
+    <None Include="DataSets\DataSet6.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSet6.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DataSets\DataSet6.xss">
+      <DependentUpon>DataSet6.xsd</DependentUpon>
+    </None>
+    <None Include="DataSets\DataSet7.xsc">
+      <DependentUpon>DataSet7.xsd</DependentUpon>
+    </None>
+    <None Include="DataSets\DataSet7.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSet7.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DataSets\DataSet7.xss">
+      <DependentUpon>DataSet7.xsd</DependentUpon>
+    </None>
+    <None Include="DataSets\DataSet8.xsc">
+      <DependentUpon>DataSet8.xsd</DependentUpon>
+    </None>
+    <None Include="DataSets\DataSet8.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSet8.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DataSets\DataSet8.xss">
+      <DependentUpon>DataSet8.xsd</DependentUpon>
+    </None>
     <None Include="DataSets\DataSet5.xsc">
       <DependentUpon>DataSet5.xsd</DependentUpon>
     </None>

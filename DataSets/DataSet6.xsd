@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="DataSet6" targetNamespace="http://tempuri.org/DataSet6.xsd" xmlns:mstns="http://tempuri.org/DataSet6.xsd" xmlns="http://tempuri.org/DataSet6.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection ConnectionStringObject="Provider=SQLNCLI11;Data Source=192.168.20.9;Persist Security Info=True;Password=12345;User ID=proyecto" IsAppSettingsProperty="false" Modifier="Assembly" Name="SQLNCLI11.192.168.20.9.proyecto" Provider="System.Data.OleDb" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="incapacidadTableAdapter" GeneratorDataComponentClassName="incapacidadTableAdapter" Name="incapacidad" UserDataComponentName="incapacidadTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="SQLNCLI11.192.168.20.9.proyecto" DbObjectName="proyecto.dbo.incapacidad" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT "CEDULA", "NOMBRE", "INCAPACIDAD" FROM "dbo"."incapacidad"</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="CEDULA" DataSetColumn="CEDULA" />
+              <Mapping SourceColumn="NOMBRE" DataSetColumn="NOMBRE" />
+              <Mapping SourceColumn="INCAPACIDAD" DataSetColumn="INCAPACIDAD" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="DataSet6" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="DataSet6" msprop:Generator_UserDSName="DataSet6">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="incapacidad" msprop:Generator_TableClassName="incapacidadDataTable" msprop:Generator_TableVarName="tableincapacidad" msprop:Generator_TablePropName="incapacidad" msprop:Generator_RowDeletingName="incapacidadRowDeleting" msprop:Generator_RowChangingName="incapacidadRowChanging" msprop:Generator_RowEvHandlerName="incapacidadRowChangeEventHandler" msprop:Generator_RowDeletedName="incapacidadRowDeleted" msprop:Generator_UserTableName="incapacidad" msprop:Generator_RowChangedName="incapacidadRowChanged" msprop:Generator_RowEvArgName="incapacidadRowChangeEvent" msprop:Generator_RowClassName="incapacidadRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="CEDULA" msprop:Generator_ColumnVarNameInTable="columnCEDULA" msprop:Generator_ColumnPropNameInRow="CEDULA" msprop:Generator_ColumnPropNameInTable="CEDULAColumn" msprop:Generator_UserColumnName="CEDULA" type="xs:int" />
+              <xs:element name="NOMBRE" msprop:Generator_ColumnVarNameInTable="columnNOMBRE" msprop:Generator_ColumnPropNameInRow="NOMBRE" msprop:Generator_ColumnPropNameInTable="NOMBREColumn" msprop:Generator_UserColumnName="NOMBRE">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="40" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="INCAPACIDAD" msprop:Generator_ColumnVarNameInTable="columnINCAPACIDAD" msprop:Generator_ColumnPropNameInRow="INCAPACIDAD" msprop:Generator_ColumnPropNameInTable="INCAPACIDADColumn" msprop:Generator_UserColumnName="INCAPACIDAD">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

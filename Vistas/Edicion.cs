@@ -1,4 +1,5 @@
-﻿using System;
+﻿using GH_Incapacidades_medica.Vistas;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -28,6 +29,13 @@ namespace GH_Incapacidades_medica
         {
             Editar_Radicado editar = new Editar_Radicado();
             editar.Show();
+            this.Hide();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            Borrar borrar = new Borrar();
+            borrar.Show();
             this.Hide();
         }
     }
